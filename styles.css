@@ -411,11 +411,6 @@ footer a:hover, footer i:hover{
         transition: all 0.3s ease;
     }
 
-    .menu-items li{
-
-        
-    }
-
     .menu-items li, .menu-items a {
         color: #fff;
         text-decoration: none;
