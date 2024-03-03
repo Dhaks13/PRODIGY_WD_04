@@ -4,41 +4,48 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" type="image/png" href="img/logo.png" />
+        <link rel="icon" type="image/png" href="img/logo.jpg" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <title>Personal Portfolio</title>
         <script src="scripts.js"></script>
     </head>
     <body>
         <div class="nav">
-            <button id="nav-button" class="nav-button b1" onclick="ToggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <button id="nav-button" class="nav-button b1" onclick="toggle()"><i id="nav-icon" class="fa-solid fa-bars"></i></button>
             <h1 class="title">PORTFOLIO</h1>
             <div class="menu">
                 <ul class="menu-items">
-                    <a name="home" href="#home"><li>HOME</li></a>
-                    <a name="aboutme" href="#about"><li>ABOUT ME</li></a>
-                    <a name="skills"  href="#skills"><li>SKILLS</li></a>
-                    <a name="projects" href="#projects"><li>PROJECTS</li></a>
-                    <a name="contact" href="#contact"><li>CONTACT</li></a>
+                    <a name="home" onclick="toggle()" href="#home"><li>HOME</li></a>
+                    <a name="aboutme" onclick="toggle()" href="#about"><li>ABOUT ME</li></a>
+                    <a name="skills" onclick="toggle()" href="#skills"><li>SKILLS</li></a>
+                    <a name="projects" onclick="toggle()" href="#projects"><li>PROJECTS</li></a>
+                    <a name="contact" onclick="toggle()" href="#contact"><li>CONTACT</li></a>
                 </ul>
             </div>
         </div>
-            <div id="home">
+            <div id="home" class="home">
                 <h1 class="Myself">Hi,<br>I'm DHAKSHIN A V</h1>
-
+                    <br>
+                    <br>
                     <p class="tagline">Web Developer | Programmer <br> Undergraduate @SASTRA University | Core Team Member @Salvo</p>
                     <br>
-                    <a name="signup" href="#contact">Hire Me</a>
+                    <br>
+                    <a href="#contact"><button name="signup">Hire Me</button></a>
+                    <img src="img/me.png" alt="me" loading="eager">
             </div>
-            <div id="about">
+            <div id="about" class="about">
                 <h2>About Me</h2>
-                <p class="desc">As a student pursuing a B.Tech degree in Information Technology at SASTRA University, He is passionate about coding and exploring the world of software development. He is driven by the constant challenge of learning new technologies and finding innovative solutions to complex problems. With a strong foundation in programming languages such as C, C++, Java and Python, He is eager to develop his skills further and gain real-world experience in the IT field. He is excited to connect with like-minded professionals in the industry and explore new opportunities to grow and learn.
+                <img src="img/logo.jpg" alt="me" loading="eager"> 
+                <p class="desc">A student pursuing a B.Tech degree in Information Technology at SASTRA University, He is passionate about coding and exploring the world of software development. He is driven by the constant challenge of learning new technologies and finding innovative solutions to complex problems. With a strong foundation in programming languages such as C, C++, Java and Python, He is eager to develop his skills further and gain real-world experience in the IT field. He is excited to connect with like-minded professionals in the industry and explore new opportunities to grow and learn.
                 </p>   
             </div>
             <div id="skills" class="skills">
                 <H2>SKILLS</H2>
+                <br>
+                <br>
+                <div class="grid">
                 <div class="Languages-1">
-                    <h3>Programming Languages:</h3>
+                    <h3>Programming Languages</h3>
                     <p>
                         <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a>
                         <a href="https://www.w3schools.com/cpp/cpp_intro.asp" target="_blank" rel="noreferrer"> <img src="https://isocpp.org/assets/images/cpp_logo.png" alt="c" width="40" height="40"/> </a>
@@ -50,7 +57,7 @@
                     </p>
                 </div>
                 <div class="Languages-2">
-                    <h3>Web Development:</h3>
+                    <h3>Web Development</h3>
                     <p>
                       <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
                         <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> 
@@ -59,7 +66,7 @@
                     </p>
                 </div>
                 <div class="Languages-3">
-                    <h3>Softwares and Tools Known:</h3>
+                    <h3>Softwares and Tools Known</h3>
                     <p>
                       <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="VS code" width="40" height="40"/></a>
                       <a href="https://github.com/" target="_blank" rel="noreferrer"> <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="github" width="40" height="40"/></a>
@@ -69,31 +76,32 @@
                     </p>
                 </div>
             </div>
-            <div id="projects">
+            </div>
+            <div id="projects" class="projects">
                 <H2>PROJECTS</H2>
-                <p>Webs Developed
+                <p><h3>Webs Developed</h3>
                     <ul>
-                      <li>Personal Portfolio</li>
-                      <li>Movie Site</li>
-                      <li>StopWatch</li>
-                      <li>Resposive Landing Page</li>
-                      <li>Weather Prediction Page</li>
-                      <li>Tic Tac Toe Game</li>
-                      <li>Survey Form</li>
-                      <li>Tribute Page</li>
+                      <a target="_blank" href=""><li>Personal Portfolio</li></a>
+                      <a target="_blank" href=""><li>Movie Site</li></a>
+                      <a target="_blank" href=""><li>StopWatch</li></a>
+                      <a target="_blank" href=""><li>Resposive Landing Page</li></a>
+                      <a target="_blank" href=""><li>Weather Prediction Page</li></a>
+                      <a target="_blank" href=""><li>Tic Tac Toe Game</li></a>
+                      <a target="_blank" href=""><li>Survey Form</li></a>
+                      <a target="_blank" href=""><li>Tribute Page</li></a>
                     </ul>
                 </p>
-                <p>AI/ML
+                <p><h3>AI/ML</h3>
                     <ul>
-                        <li>LAW ChatBOT</li>
-                        <li>Student Performance Prediction</li>
+                        <a target="_blank" href=""><li>LAW ChatBOT</li></a>
+                        <a target="_blank" href=""><li>Student Performance Prediction</li></a>
                     </ul>
                 </p>
 
             </div>
             <div id="contact" class="contact">
                 <h2 class="heading">Contact Me</h2>
-                <form>
+                <form action="#">
                     <input type="text" placeholder="Full Name">
                     <input type="email" placeholder="Email Adress">
                     <input type="number" placeholder="Phone Number">
@@ -104,34 +112,36 @@
             </div>
 
             
-    <div class="social">
-        <a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=dhaks13" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Dhaks13" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/_dhaks_13_/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:avdhakshin1354@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-      </div>
+        <div class="foot">
+            <div class="social">
+                <a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=dhaks13" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Dhaks13" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_dhaks_13_/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:avdhakshin1354@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+          </div>
   
-      <ul class="list">
-        <li>
-          <a href="#contact">FAQ</a>
-        </li>
-        <li>
-          <a href="#about">About Me</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-      <p class="copyright">
-        <i class="fa-regular fa-copyright"></i>Dhakshin A V | All Rights Reserved.</p>
+          <ul class="list">
+                <li>
+                    <a href="#contact">FAQ</a>
+                </li>
+                <li>
+                    <a href="#about">About Me</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+            <p class="copyright">
+            <i class="fa-regular fa-copyright"></i> Dhakshin A V | All Rights Reserved.</p>
+        </div>
         <footer>
             <div class="connect">
-            <i class="fa-regular fa-copyright"></i><a href="https://www.linkedin.com/in/dhaks13/" target="_blank">(@Dhaks13)</a>
-            <a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=dhaks13" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Dhaks13" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/_dhaks_13_/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:avdhakshin1354@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-        </div>
+                <i class="fa-regular fa-copyright"></i><a href="https://www.linkedin.com/in/dhaks13/" target="_blank">(@Dhaks13)</a>
+                <a href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=dhaks13" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Dhaks13" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_dhaks_13_/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:avdhakshin1354@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
         </footer> 
     </body>
 </html>
